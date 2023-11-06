@@ -136,7 +136,7 @@ public class BookController {
 	})
 	@PostMapping("/{concertDetailSeq}/seat")
 	ResponseEntity<SuccessResponseDto> book(
-		@PathVariable("concertDetailSeq") Integer concertDetailSeq, @RequestParam Integer userSeq,
+		@PathVariable("concertDetailSeq") Long concertDetailSeq, @RequestParam Long userSeq,
 		@RequestBody ConcertSeatBookRequestDto requestDto) {
 		log.info("===== 선택 좌석 예매 요청 시작, url={}, concertDetailSeq: {}, {} =====",
 			"/concerts", concertDetailSeq, requestDto.toString());
